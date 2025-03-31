@@ -1,0 +1,27 @@
+Question :1
+
+What is Singleton Pattern and Explain?
+
+Singleton pattern is cerational design pattern which ensure a class has only one instance
+and provide global point of access to that instance.In the context of an automation framework,
+especially one built using WebDriver-based tools like Selenium or WebdriverIO, the Singleton
+pattern can be useful for managing resources such as WebDriver instances, configurations, and other shared utilities.
+
+Advantage:
+
+a).  Consistent state management: Ensure there is only one instance in particular object
+     throughout the test execution and reducing risk of inconsistent states.
+b).  Resource Optimization :Limits Resources usage by preventing the unnecessary
+      creation of multiple instances of the webdriver or other classes.
+c).  Thread Safety : Useful for shared resources, like database connections or logging configurations,
+     that should not be duplicated in a multithreaded test environment.
+d).  Ease of Access :Provides a single, easily accessible instance, which makes it easier to control
+     the lifecycle and configuration of the object.
+
+2.  How to make Singleton Design Pattern?
+
+   1.  Private static instance of the class
+   2. Lazy Intilaztion.
+   3. Private constructor to prevent/Avoid instantiation.
+   4. Global Access point for method to instance/Object
+   5. Resource cleanup.

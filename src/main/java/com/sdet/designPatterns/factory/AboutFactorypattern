@@ -1,0 +1,10 @@
+Q1 : What is factory Design Pattern?
+
+      Factory Design pattern is creation design pattern that provides a way to
+      create object without exposing  the instantiation logic to the client,Instead of using creation with new keyword
+      the Factory Method handles object creation.
+
+      Advantage:
+      Improved Code Readability and Reusability
+      Centralizing object creation logic makes the code clean
+      The same Factory method can be used in multiple places.
