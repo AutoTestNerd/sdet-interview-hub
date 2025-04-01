@@ -1,0 +1,20 @@
+Q: What is builder Pattern
+    its a creation design pattern that helps in constructing complex objects step by step.
+    It separates object construction from its representation, allowing us to create different
+    types of objects using the same building process
+
+
+    Where to use:
+    1. we have to pass many arguments to create Object.
+    2. Some parameters might be optional.
+
+ 2.  Why Use the Builder Pattern?
+    ✅ Avoids long constructors – Instead of passing multiple parameters to a constructor, we use a builder to set values one by one.
+    ✅ Improves readability – The code is easier to understand and use.
+    ✅ Encapsulates object creation – The object is constructed in a controlled manner.
+    ✅ Supports immutability – The final object is immutable since it’s built step by step and then finalized
+
+
+ 3. How to implement Builder Patter in Automation Framework?
+     COde in Builder Pattern package.
+     Register Class - Builder Pattern Code.
