@@ -1,0 +1,4 @@
+Q: What is your approach to handling flaky tests in an automation suite?
+Answer: Flaky tests reduce the reliability of automation by producing inconsistent results,
+        making it hard to trust the test outcomes.
+

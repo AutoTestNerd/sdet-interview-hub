@@ -1,0 +1,95 @@
+Q- What is a constructor? Can we override a constructor?
+
+contructor is method in class which has same name as class which be class when object is created.
+Key Features of a Constructor:
+✅ The constructor name must match the class name.
+✅ It does not have a return type (not even void).
+✅ It is automatically called when an object is created.
+✅ If no constructor is defined, Java provides a default constructor.
+
+No we can't override constructor , override required inheritance but constructor can't be inherited ,instead of overriding constructor we can use constrictor overloading.
+Types of constructor
+1. Default constructor - if there is no constructor java will create default constructor
+2. Parameterized Constructor :allows object initialization with custom values
+3. Copy Constructor :copies values from one object to another.
+
+
+Q 2: How to achieve multiple abstraction in Java?
+
+     1. Using multiple Interface:
+
+
+
+
+     2. Using Abstract class and Interface
+
+
+Q 3. What is the static keyword in Java?
+
+    Static keyword is used to define class-level member(variable ,method ,blocks and nested class ) that belong to class itself rather than individual instance if the class .This Means static member can be used without creating object.
+
+
+   Static Variable - Shared across all instance of the class.
+
+       class counter {
+                static count =0;
+
+                counter (){
+                     count++;
+                     }
+        }
+
+       class main {
+            Counter c1 = new Counter();
+            Counter c2 = new Counter();
+            System.out.println(Counter.count);
+
+  }
+
+   Static Method : belongs to the class
+
+ class counter {
+
+    public static mycounter(){
+    System.out.println("My CLass");
+    }
+}
+ class main {
+
+    System.out.println(Counter.mycounter()); -o/p Myclass  //(no object needed)
+ }
+
+ Static Block - Executed once when class is loaded into memory.
+
+      class Database {
+      static String driver;
+
+        static {
+        driver ="com.mysql.jdbc.driver";
+        System.out.println("Database driver loaded: " + driver);
+        }
+      }
+      public class Main {
+          public static void main(String[] args) {
+              // Output when class is first referenced:
+              // "Database driver loaded: com.mysql.jdbc.Driver"
+          }
+      }
+
+ Nested Class : Doesn't require any instance of outer class
+        Class obj1 {
+             static String name = "MIT"; // Static variable
+
+             static class obj2 {
+                  void display() {
+                   System.out.println("University: " + name); // Access static variable
+                     }
+
+             }
+        }
+        public class main (){
+            psvm (String[] args){
+            obj1.obj2 ob = new obj1.obj2();
+            ob.display(); //University: " MIT
+             }
+        }
