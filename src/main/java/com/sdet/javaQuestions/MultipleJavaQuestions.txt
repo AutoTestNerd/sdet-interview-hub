@@ -93,3 +93,32 @@ Q 3. What is the static keyword in Java?
             ob.display(); //University: " MIT
              }
         }
+
+ 4. Explain JVM & GC :
+      https://www.youtube.com/watch?v=vz6vSZRuS2M
+
+ 5. Difference between constructor overloading and method overloading?
+
+ 6. What is exception?
+
+ 7. serilization vs deseriilzation in java?
+
+
+8. 11. Difference between String and StringBuffer.
+13. Explain the collections framework hierarchy.
+14. Difference between Hashtable and HashSet.
+15. Difference between Comparable and Comparator.
+17. Write a program to create a custom exception.
+20. Difference between final, finally, and finalize.
+19. Why is an abstract class allowed to have a constructor?
+24. What are Java Streams and Lambda Expressions?
+27. What is a functional interface?
+6) What are commonly used interfaces in Selenium
+ 8 How is memeory allocated in String literal and New String class object
+ 9 How string is immutable?
+
+.  Selenium Question :
+   RestAssured
+   JerseyClient
+
+

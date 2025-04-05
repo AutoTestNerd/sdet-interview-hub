@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Sutomation Suite" parallel="methods"  thread-count="2">
+
+    <listeners>
+        <listener class-name="com.sdet.SeleniumQuestions.SeleniumPOMFramework.TestListener"></listener>
+    </listeners>
+    <test name="login test">
+        <classes>
+               <class name="com.sdet.SeleniumQuestions.SeleniumPOMFramework.LoginTest"></class>
+    </classes>
+    </test>
+</suite>
