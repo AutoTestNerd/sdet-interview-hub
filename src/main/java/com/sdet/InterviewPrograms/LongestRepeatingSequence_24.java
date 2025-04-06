@@ -1,8 +1,6 @@
 package com.sdet.InterviewPrograms;
 
-import java.util.Map;
-
-public class LongestRepeatingSequence {
+public class LongestRepeatingSequence_24 {
 
     public static int lcs(String str){
 
