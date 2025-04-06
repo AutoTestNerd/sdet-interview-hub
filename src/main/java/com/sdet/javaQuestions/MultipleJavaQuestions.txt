@@ -119,6 +119,12 @@ Q 3. What is the static keyword in Java?
 
 .  Selenium Question :
    RestAssured
+
+
    JerseyClient
+   Code Review Prinicpal -Kiss.SOLID
+   HttpMethod-
+   File Excel
+   Maven
 
 
