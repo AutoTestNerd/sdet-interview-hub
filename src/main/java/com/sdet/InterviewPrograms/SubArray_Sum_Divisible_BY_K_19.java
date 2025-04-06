@@ -3,7 +3,7 @@ package com.sdet.InterviewPrograms;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SubArray_Sum_Divisible_BY_K {
+public class SubArray_Sum_Divisible_BY_K_19 {
     public static void main(String[] args) {
         int[] arr = {2,3,5,4,5,3,4};
         int k = 7;
