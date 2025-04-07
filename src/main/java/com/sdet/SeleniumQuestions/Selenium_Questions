@@ -18,3 +18,26 @@ Fluent Wait - Custom wait with polling frequency and exceptional Handling.
 
 
   Q2. What is the difference between driver.close() and driver.quit()?
+
+
+  Q3. ChromeDriver driver = new ChromeDriver();
+      WebDriver driver = new WebDriver();
+      WebDriver driver = new ChromeDriver();
+      which one is valid ?
+
+      Ans :1. ChromeDriver driver = new ChromeDriver(); ✅ Valid
+           This creates a Chrome-specific driver.
+
+           You can use all ChromeDriver-specific methods (though there aren’t many exclusive ones).
+
+           Good if you’re sure you’re only using Chrome.
+
+           2. WebDriver driver = new WebDriver(); ❌ Invalid
+           WebDriver is an interface, and you cannot instantiate interfaces directly.
+
+           This will throw a compilation error.
+
+           3. WebDriver driver = new ChromeDriver(); ✅ Valid and Recommended
+           This uses polymorphism: WebDriver is the interface, and ChromeDriver is the implementation.
+
+           It makes your code more flexible — you can easily switch to FirefoxDriver, EdgeDriver, etc. later.
