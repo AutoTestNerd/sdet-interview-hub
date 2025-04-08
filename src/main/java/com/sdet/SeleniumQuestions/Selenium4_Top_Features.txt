@@ -1,0 +1,50 @@
+Q: Selenium 4 Top Features?
+Ans:
+    1.🚀 W3C WebDriver Standard Support
+             Selenium 4 fully adopts the W3C WebDriver standard.
+             Improved browser compatibility and more stable automation.
+             Better communication between Selenium and modern browsers (Chrome, Edge, Firefox).
+
+    2. 📸 Native Support for Relative Locators
+            Find elements relative to others using natural language:
+                WebElement label = driver.findElement(By.id("emailLabel"));
+                WebElement input = driver.findElement(RelativeLocator.with(By.tagName("input")).below(label));
+            Available options:
+                above()
+                below()
+                toLeftOf()
+                toRightOf()
+                near()
+
+    3. 🖥️ Improved WebDriverManager (No Need for Manual Drivers)
+            With tools like WebDriverManager (officially recommended),
+            you don’t need to download driver binaries manually anymore.
+                WebDriverManager.chromedriver().setup();
+                WebDriver driver = new ChromeDriver();
+    4. 🪟 New Window and Tab Management
+            You can now open new tabs/windows using:
+                     driver.switchTo().newWindow(WindowType.TAB); // or WindowType.WINDOW
+    5. 📊 Built-in Chrome DevTools Protocol (CDP) Integration
+             Allows interaction with browser internals like:
+             Network interception
+             Console logs
+             Geolocation mocking
+             Performance metrics
+            Example:
+                DevTools devTools = ((HasDevTools) driver).getDevTools();
+                devTools.createSession();
+                devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+    6. 💻 Better Grid Experience
+            Selenium Grid 4 now supports:
+                Docker support
+                Fully distributed architecture
+                New UI dashboard for monitoring
+                Improved scalability and parallel execution
+
+    7. 🔎 Enhanced Element Screenshot
+            Capture screenshot of a specific WebElement:
+                WebElement logo = driver.findElement(By.id("site-logo"));
+                 File screenshot = logo.getScreenshotAs(OutputType.FILE);
+    8. 📦 Updated Selenium APIs and Better IDE Support
+                 Cleaner syntax and API restructuring
+                 Modern IDEs like IntelliJ and VS Code provide better auto-completion and hints

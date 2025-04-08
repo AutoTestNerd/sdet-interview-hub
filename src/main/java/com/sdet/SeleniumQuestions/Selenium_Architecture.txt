@@ -1,0 +1,41 @@
+Q : Detailed Selenium WebDriver Architecture with Diagram.
+    Ans :
+     Selenium WebDriver is an open-source tool for automating web applications across different browsers.
+     Its architecture follows a client-server model, where the client sends commands to the server
+     (i.e., the browser) to perform specific actions. The communication between the client and the server
+      is standardized using either the W3C WebDriver protocol or the JSON Wire Protocol (older versions).
+
+        Diagram:
+
+      Components of Selenium WebDriver Architecture:
+        Selenium Client Libraries (Language Bindings):
+                    Selenium provides bindings for multiple programming languages,including Java, Python,
+                    C#, Ruby, and JavaScript.The test scripts are written using these libraries,
+                    which internally communicate with the WebDriver API to interact with the browser.
+        WebDriver API:
+                    The WebDriver API provides a high-level interface to issue commands to the browser.
+                    This API defines methods like .click(), .sendKeys(), .get(), etc.
+                    It abstracts the browser-specific details, providing a uniform way of interacting with
+                    all supported browsers.
+        W3C WebDriver Protocol:
+                    The W3C WebDriver Protocol is the newer standard (adopted in Selenium 4) for browser automation.
+                     It eliminates inconsistencies across different browser drivers and allows WebDriver to communicate directly with browsers using HTTP-based communication.
+                    In older versions of Selenium, this communication was handled via the JSON Wire Protocol. The W3C standard improves performance and cross-browser compatibility.
+        Browser-Specific Drivers:
+                    These are the browser-specific implementations of the WebDriver API. Each browser has its own driver, such as:
+                        ChromeDriver (for Google Chrome)
+                        GeckoDriver (for Mozilla Firefox)
+                        IEDriverServer (for Internet Explorer)
+                        Microsoft Edge Driver (for Microsoft Edge)
+                        SafariDriver (for Safari)
+                    These drivers act as a bridge between the Selenium commands (WebDriver API) and the actual browser. They receive HTTP requests (commands) from the WebDriver
+                    API and convert them into browser-specific actions.
+
+        Browsers:
+                    These are the actual browsers where the tests are executed. WebDriver controls browsers like
+                    Chrome, Firefox, Safari, Edge, and Internet Explorer.
+                    The browser receives commands from the browser driver and performs actions like navigating to
+                    a URL, clicking elements, or fetching page content
+
+
+
