@@ -41,7 +41,7 @@ public class ScrollScript {
         WebElement scrollableCarousel = driver.findElement(By.xpath("//div[contains(@class,'a-carousel')]"));
 
         JavascriptExecutor js1 = (JavascriptExecutor)driver;
-        js1.executeScript("arguments[0].shiftLeft += 300",scrollableCarousel);
+        js1.executeScript("arguments[0].scrollLeft += 300",scrollableCarousel);
 
 
 
