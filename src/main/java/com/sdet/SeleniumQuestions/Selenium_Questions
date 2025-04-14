@@ -41,3 +41,5 @@ Fluent Wait - Custom wait with polling frequency and exceptional Handling.
            This uses polymorphism: WebDriver is the interface, and ChromeDriver is the implementation.
 
            It makes your code more flexible — you can easily switch to FirefoxDriver, EdgeDriver, etc. later.
+
+  Q4. Selenium He
