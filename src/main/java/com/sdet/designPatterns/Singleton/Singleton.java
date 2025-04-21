@@ -10,6 +10,7 @@ public class Singleton {
 
 
      // 1. private instance of the class
+    //Static - The variable belongs to the class itself, not any instance of it.
      private  static WebDriver driver;
 
     // 2. Create private constructor to  prevent/Avoid  instantiation.

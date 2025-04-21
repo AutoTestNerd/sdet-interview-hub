@@ -8,6 +8,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SingletonWithParallelExecution {
 
+
+    //instance → holds the single object of the Singleton class.
+    //
+    //ThreadLocal<WebDriver> → stores a separate WebDriver for each thread,
+    // making the WebDriver thread-safe for parallel execution.
     private static SingletonWithParallelExecution instance;
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 

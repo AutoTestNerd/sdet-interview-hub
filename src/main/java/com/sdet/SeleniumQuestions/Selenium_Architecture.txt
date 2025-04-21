@@ -19,8 +19,10 @@ Q : Detailed Selenium WebDriver Architecture with Diagram.
                     all supported browsers.
         W3C WebDriver Protocol:
                     The W3C WebDriver Protocol is the newer standard (adopted in Selenium 4) for browser automation.
-                     It eliminates inconsistencies across different browser drivers and allows WebDriver to communicate directly with browsers using HTTP-based communication.
-                    In older versions of Selenium, this communication was handled via the JSON Wire Protocol. The W3C standard improves performance and cross-browser compatibility.
+                     It eliminates inconsistencies across different browser drivers and allows WebDriver to
+                     communicate directly with browsers using HTTP-based communication.
+                      In older versions of Selenium, this communication was handled via the
+                     JSON Wire Protocol. The W3C standard improves performance and cross-browser compatibility.
         Browser-Specific Drivers:
                     These are the browser-specific implementations of the WebDriver API. Each browser has its own driver, such as:
                         ChromeDriver (for Google Chrome)
@@ -28,7 +30,8 @@ Q : Detailed Selenium WebDriver Architecture with Diagram.
                         IEDriverServer (for Internet Explorer)
                         Microsoft Edge Driver (for Microsoft Edge)
                         SafariDriver (for Safari)
-                    These drivers act as a bridge between the Selenium commands (WebDriver API) and the actual browser. They receive HTTP requests (commands) from the WebDriver
+                    These drivers act as a bridge between the Selenium commands (WebDriver API) and the actual browser.
+                    They receive HTTP requests (commands) from the WebDriver
                     API and convert them into browser-specific actions.
 
         Browsers:

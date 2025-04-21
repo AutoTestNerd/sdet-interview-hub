@@ -1,5 +1,6 @@
 Q: What is builder Pattern
-    its a creation design pattern that helps in constructing complex objects step by step.
+    its a creation design pattern that helps in constructing complex objects step by step, especially when an object
+    has many optional or configurable fields.
     It separates object construction from its representation, allowing us to create different
     types of objects using the same building process
 
@@ -7,6 +8,10 @@ Q: What is builder Pattern
     Where to use:
     1. we have to pass many arguments to create Object.
     2. Some parameters might be optional.
+    It’s perfect when:
+    You want to avoid constructor overloading (having too many constructors)
+
+    You want to create immutable objects with a clean and readable structure
 
  2.  Why Use the Builder Pattern?
     ✅ Avoids long constructors – Instead of passing multiple parameters to a constructor, we use a builder to set values one by one.

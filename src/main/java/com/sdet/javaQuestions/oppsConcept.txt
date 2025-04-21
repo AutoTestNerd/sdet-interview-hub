@@ -1,6 +1,7 @@
 Q : What are the oops Concept in Java?
 Answer :
-    Encapsulation : hiding the data or method that operates on data with in the class and allowing access through public method(getter ans setter).
+    Encapsulation : hiding the data or method that operates on data with in the class and allowing access through
+                   public method(getter ans setter).
                     it protects the internal state of the object from outside reference;
 
               Key Point of encapsulation :

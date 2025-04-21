@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AlertExample {
@@ -45,6 +46,9 @@ public class AlertExample {
         System.out.println(alertText1);
         Thread.sleep(3000);
         alert2.accept();
+
+
+
         driver.close();
 
 

@@ -7,7 +7,8 @@ Key Features of a Constructor:
 ✅ It is automatically called when an object is created.
 ✅ If no constructor is defined, Java provides a default constructor.
 
-No we can't override constructor , override required inheritance but constructor can't be inherited ,instead of overriding constructor we can use constrictor overloading.
+No we can't override constructor , override required inheritance but constructor can't be inherited ,
+                               instead of overriding constructor we can use constrictor overloading.
 Types of constructor
 1. Default constructor - if there is no constructor java will create default constructor
 2. Parameterized Constructor :allows object initialization with custom values
@@ -26,7 +27,9 @@ Q 2: How to achieve multiple abstraction in Java?
 
 Q 3. What is the static keyword in Java?
 
-    Static keyword is used to define class-level member(variable ,method ,blocks and nested class ) that belong to class itself rather than individual instance if the class .This Means static member can be used without creating object.
+    Static keyword is used to define class-level member(variable ,method ,blocks and nested class )
+    that belong to class itself rather than individual instance if the class .
+    This Means static member can be used without creating object.
 
 
    Static Variable - Shared across all instance of the class.
@@ -47,6 +50,9 @@ Q 3. What is the static keyword in Java?
   }
 
    Static Method : belongs to the class
+    A static method belongs to the class itself, not to any object of the class.
+    It can be called without creating an object.
+    It can access only static variables or other static methods directly.
 
  class counter {
 
@@ -98,13 +104,48 @@ Q 3. What is the static keyword in Java?
       https://www.youtube.com/watch?v=vz6vSZRuS2M
 
  5. Difference between constructor overloading and method overloading?
+        Constructor Overloading is used when you need different ways to initialize objects. For example,
+        creating an object with default values or values passed from the constructor.
+
+        Method Overloading is used when you want to perform the same action (like addition, multiplication) on different types or numbers of inputs. It improves the flexibility of your code.
 
  6. What is exception?
 
  7. serilization vs deseriilzation in java?
+        Serialization is the process of converting a Java object into a byte stream so that it can be:
+
+                Saved to a file
+
+                Sent over a network
+
+                Stored in a database
+
+            🔸 This byte stream can later be deserialized to recreate the original object.
+
+              ➕ Use Cases:
+                   Saving the state of an object (persistence)
+
+                    Sending objects over a network (e.g., in RMI, socket programming)
+
+                    Caching and deep cloning
+
+             🛠️ Syntax:
+                To serialize an object:
+
+                 The class must implement the Serializable interface.
+
+                 Use ObjectOutputStream.
+      Deserialization is the process of reconstructing a Java object from a byte stream.
 
 
-8. 11. Difference between String and StringBuffer.
+
+8. Difference between String and StringBuffer.
+    Feature | String | StringBuffer
+    Mutability | Immutable | Mutable
+    Meaning | Once created, it cannot be changed | You can modify the content directly
+    Example | str.concat("Java") returns a new object | sb.append("Java") modifies the same object
+
+
 13. Explain the collections framework hierarchy.
 14. Difference between Hashtable and HashSet.
 15. Difference between Comparable and Comparator.
@@ -116,6 +157,11 @@ Q 3. What is the static keyword in Java?
 6) What are commonly used interfaces in Selenium
  8 How is memeory allocated in String literal and New String class object
  9 How string is immutable?
+
+
+ ✅ Why Use a private Constructor?
+ Ans : A private constructor prevents the creation of objects from outside the class.
+
 
 .  Selenium Question :
    RestAssured
