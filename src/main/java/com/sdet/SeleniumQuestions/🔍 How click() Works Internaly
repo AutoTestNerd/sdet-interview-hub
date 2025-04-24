@@ -1,0 +1,77 @@
+🔍 How click() Works Internally in Selenium WebDriver (Java)
+         You call:
+
+        WebElement button = driver.findElement(By.id("submitButton"));
+        button.click();
+        🧩 Step-by-Step Breakdown of click() Internally
+        1. Interface Method: WebElement
+        The click() method is declared in the WebElement interface:
+
+        public interface WebElement {
+            void click();
+        }
+        This is the method signature you'll call in your test code.
+
+        2. Concrete Implementation in RemoteWebElement
+        RemoteWebElement implements WebElement and provides the actual implementation of click().
+
+        // org.openqa.selenium.remote.RemoteWebElement
+
+        @Override
+        public void click() {
+            execute("clickElement", ImmutableMap.of());
+        }
+        When you call click(), it internally calls the execute() method with the "clickElement" command and no additional parameters.
+
+        3. Command Execution in execute()
+        The execute() method is inherited from RemoteWebElement and sends the command to the remote WebDriver server:
+
+        protected Response execute(String command, Map<String, ?> parameters) {
+            Command cmd = new Command(sessionId, command, parameters);
+            Response response = executor.execute(cmd);
+            return response;
+        }
+        sessionId is the WebDriver session identifier.
+
+        command is the name of the action (in this case, "clickElement").
+
+        parameters are additional command arguments (none in this case).
+
+        The execute() method sends the command to the CommandExecutor.
+
+        4. HttpCommandExecutor and HTTP Request
+        The HttpCommandExecutor class is responsible for sending the HTTP request to the browser driver (e.g., chromedriver):
+
+        public class HttpCommandExecutor implements CommandExecutor {
+            public Response execute(Command command) throws IOException {
+                // Send the command as an HTTP request to the WebDriver server
+            }
+        }
+        It sends a request like:
+
+        POST /session/:sessionId/element/:elementId/click
+        sessionId is the WebDriver session ID.
+
+        elementId is the ID of the element that you want to click.
+
+        5. Remote Browser Driver (e.g., ChromeDriver)
+        Once the browser driver (like chromedriver) receives the request, it performs the click action in the browser using native commands.
+
+        For example, in the case of Chrome:
+
+        The chromedriver translates the command into a series of JavaScript commands that are executed in the browser's context:
+
+        var element = document.querySelector('#submitButton');
+        element.click();
+        It ensures that the click happens only if the element is visible and interactable (i.e., not hidden, not disabled).
+
+        6. Response Handling
+        The browser driver returns a response to the HttpCommandExecutor, indicating whether the click was successful.
+
+        If successful, the response typically contains a status of 0 (success).
+
+        If the click fails (e.g., element is not interactable), it sends an error message.
+
+        7. Returning to Test Script
+        Finally, the result (success or failure) is sent back to the RemoteWebElement class and returned to the test script.
+
