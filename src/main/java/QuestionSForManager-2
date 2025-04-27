@@ -1,0 +1,92 @@
+Q1: Handling a situation where a high-performing team member doesn’t agree with feedback.
+   Ans : , I approach the conversation with empathy and a focus on understanding their perspective. Here’s how I handle it:
+           1. Understanding Their Perspective :
+                    instead of pushing back , i took time to understand the view.
+                    exm: I had a senior SDET who was highly skilled in automation and had consistently delivered high-quality
+                        test scripts. However, during one of our releases, I provided feedback that the testing approach he used was too focused on speed and not enough on long-term maintainability. He was not in agreement with this,
+                      as he believed that the immediate goal of meeting deadlines took precedence over the long-term vision."
+           2.  Aligning with Team Goals:
+                    I then reframed the feedback, aligning it with our broader goals. I explained how quickly developed automation
+                    scripts could lead to brittle tests that would eventually slow us down, and ultimately impact our release cycle.
+           3.  Collaborative Problem-Solving:
+               We then collaborated on a solution. I suggested we could improve our testing process by incorporating early
+                code reviews, paired programming, and test-driven development practices,
+                which would allow us to maintain both speed and quality.
+           4.  Ongoing Support and Follow-Up:
+
+
+                "After we implemented the solution, I followed up regularly to ensure that the team member felt supported
+
+   Q2: How do you ensure quality when scaling up the team or testing scope?
+          When scaling, I focus on process, documentation, and mentorship. For example, when we onboarded 5 new engineers
+            during a product expansion, I created onboarding guides, assigned mentors, and standardized test case templates and automation code reviews.
+
+   Q3:  How I Motivate My QA/SDET Team
+       “Motivating my team starts with creating a culture of ownership, recognition, and growth.
+        I use a mix of strategic and people-focused methods to keep them engaged, aligned, and challenged.”
+
+        1. Connect Their Work to Business Impact.
+        2.  Set Clear Goals and Celebrate Wins.
+        3.  Invest in Career Growth
+        4. Create a Safe Space for Innovation
+        5. Reward and Recoginzation
+
+   q4 : How I Do Performance Reviews
+        “I conduct performance reviews by aligning individual goals with team and company objectives,
+        and using a combination of quantitative metrics and qualitative feedback.
+        1. Goal Alignment & Tracking:
+          At the beginning of each quarter, I work with each team member to set SMART goals like post defect eakag, release cycle ,test efficiency,
+           mentoring juniors, or taking ownership of a module.End of each month do the tarck performance of indivual
+        2. 360 degree feedback and peer feedback :
+             I collect 360° feedback from peers, developers, and product managers. I also ask team members to submit a self-review
+              reflecting on their impact, collaboration, and areas of growth.
+        3. Evaluation/growth plan:
+          In the actual review, I evaluate against performance criteria like quality of work,
+          ownership, initiative, team collaboration, and technical growth
+
+   Q5.  How do you build a strong QA culture within engineering?
+
+        Building a strong QA culture within engineering means embedding quality into
+        every phase of the software development lifecycle
+        1. I promote the mindset that quality isn't only QA job , its shared across developer,product and operation.
+        2. Embedded QA early in development cycle.
+        3  Strong unified and Scable automation Framework and CI/CD Integration.
+        4.  Define and Track Quality Metrics -
+                    Metrics like defect leakage, automation coverage, escaped bugs, test pass rate,
+                    and flaky test index are tracked.
+
+                   Dashboards are reviewed in retros and monthly QA reviews with the whole engineering org.
+        5.  Foster a Culture of Collaboration and Trust between QA nad dev - tarined basic Dev skils like debugging  , Code review
+        6.  Upskill Continuously and Recognize Impactc
+
+
+Q7.Test Strategy vs Test Approach
+
+        Test Strategy is a high-level, organizational-level document that defines the overall testing objectives,
+        standards, and methods to ensure product quality across the organization or a project. It is typically prepared by senior management (like the QA Manager or Test Manager) and remains relatively stable throughout the product lifecycle.
+
+        It answers what types of testing will be done (functional, performance, security, etc.).
+
+        It defines quality standards, test levels, entry/exit criteria, test environment needs, and risk management.
+
+        It ensures that all projects within the organization align with common testing principles.
+
+        ✅ Key focus: "What to test and why."
+
+        Test Approach, on the other hand, is a detailed, project-specific plan describing how testing will be
+        carried out for a particular project, sprint, release, or feature.
+        It is usually created by the Test Lead or Senior QA Engineer and can change based on project risks, timelines, or priorities.
+
+        It defines testing techniques, tools to be used, test prioritization, test data requirements, and specific deliverables.
+
+        It describes how testing will be performed within the boundaries set by the Test Strategy.
+
+        It is dynamic and can adapt as project conditions change.
+
+        ✅ Key focus: "How to test and when."
+
+
+
+
+
+

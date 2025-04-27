@@ -22,7 +22,7 @@ public class FirstNonRepeatingCharacter_6 {
     }
 
     public static void main(String[] args) {
-        String str = "oskwissr";
+        String str = "my name s manis";
         Character result = findFirstNonRepeated(str);
         if(result!=null){
             System.out.println("First non-repeated character: " + result);

@@ -1,4 +1,4 @@
-Q: What is builder Pattern
+    Q: What is builder Pattern
     its a creation design pattern that helps in constructing complex objects step by step, especially when an object
     has many optional or configurable fields.
     It separates object construction from its representation, allowing us to create different

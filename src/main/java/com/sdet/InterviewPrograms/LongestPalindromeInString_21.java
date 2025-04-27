@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestPalindromeInString_21 {
     public static void main(String[] args) {
-        String str= "abcdccdk";
+        String str= "abcdccd";
         int n = str.length();
         int res=0;
         int start=0;

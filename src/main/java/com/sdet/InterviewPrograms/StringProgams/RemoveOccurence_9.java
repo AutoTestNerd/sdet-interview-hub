@@ -10,10 +10,14 @@ public class RemoveOccurence_9 {
         {
             sb.append(ch);
             if(sb.length()>=m){
+                System.out.println("Length " +sb.length());
+
                 String sub= sb.substring(sb.length()-m);
+                System.out.println(sub);
 
                 if(sub.equals(part)){
                     sb.setLength(sb.length()-m);
+                    System.out.println("SB=== " +sb.toString());
                 }
             }
         }

@@ -17,7 +17,7 @@ public class RomanToInteger_14 {
             else if (str.charAt(i)=='C' && str.charAt(i+1)=='M') {
                 num-=100;
             }
-            else if (str.charAt(i)=='C'&& str.charAt(i+1)=='C') {
+            else if (str.charAt(i)=='C'&& str.charAt(i+1)=='D') {
                 num-=100;
             }
             else if (str.charAt(i)=='C') {

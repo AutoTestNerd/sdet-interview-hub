@@ -1,0 +1,32 @@
+Summary of the Flow
+Driver.get("amazon.com") is called on a WebDriver object.
+
+WebDriver.get() invokes the get(String url) method, defined in the WebDriver interface.
+
+If using a Remote WebDriver, it calls RemoteWebDriver.get().
+
+RemoteWebDriver sends a request to the remote server using WebDriverCommandExecutor.
+
+The ChromeDriver or other browser-specific driver executes the navigation on the browser using browser automation protocols.
+
+The browser loads the requested URL (amazon.com) and returns the page source to WebDriver.
+
+Classes Involved
+WebDriver (interface) → RemoteWebDriver (class) → WebDriverCommandExecutor (class) → Browser-Specific Driver (e.g., ChromeDriver)
+
+Methods Involved:
+
+get(String url) in WebDriver → RemoteWebDriver.get() → Browser-Specific Driver → Browser Command Execution
+
+Key Interfaces and Classes:
+WebDriver (Interface)
+
+RemoteWebDriver (Class, implements WebDriver)
+
+WebDriverCommandExecutor (Class)
+
+ChromeDriver (Class, implements WebDriver)
+
+DevTools Protocol or WebDriver Protocol (used for communication with the browser)
+
+This is a high-level flow of how the driver.get() works when navigating to a URL in Selenium.
