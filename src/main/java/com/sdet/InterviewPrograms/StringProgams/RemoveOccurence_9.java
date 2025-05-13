@@ -10,7 +10,11 @@ public class RemoveOccurence_9 {
         {
             sb.append(ch);
             if(sb.length()>=m){
+                System.out.println("Part Length " +m);
+
                 System.out.println("Length " +sb.length());
+                System.out.println("String " +sb.toString());
+
 
                 String sub= sb.substring(sb.length()-m);
                 System.out.println(sub);

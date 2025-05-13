@@ -1,0 +1,117 @@
+
+
+Q1. How would you scroll to an element in a mobile app using WebDriverIO?
+describe('Mobile App Scroll Test', () => {
+    it('should scroll to the target element', async () => {
+        // Locate the element to scroll to
+        const targetElement = await $('~targetElement');  // Replace with actual selector
+
+        // Scroll to the element
+        await targetElement.scrollIntoView();
+
+        // Optional: Validate if the element is now visible
+        await expect(targetElement).toBeDisplayed();
+    });
+});
+
+Q2:How do you handle a mobile app alert (e.g., an OK button) using WebDriverIO?
+
+describe('Mobile App Alert Test', () => {
+    it('should accept an alert', async () => {
+        // Trigger the alert (e.g., by clicking a button)
+        const triggerButton = await $('~triggerAlertButton');  // Replace with actual selector
+        await triggerButton.click();
+
+        // Wait for the alert to be displayed
+        const alertText = await driver.getAlertText();
+
+        // Accept the alert (click the OK button)
+        await driver.acceptAlert();
+
+        // Optional: Add assertions to ensure the action was successful
+        console.log(alertText);  // Log the alert text to the console (for debugging purposes)
+    });
+});
+
+3. How would you swipe on a mobile screen in WebDriverIO?
+
+it('How would you swipe on a mobile screen in WebDriverIO?' , async () =>{
+
+        const screenWidth = (await driver.getWindowRect()).width;
+        const screenHeight = (await driver.getWindowRect()).height;
+        const startX = screenWidth/2;
+        const startY = screenHeight*0.8;
+        const  endY = screenHeight*0.2;
+
+        await driver.performActions([
+
+            {
+                type: 'pointer',
+                id: 'finger1',
+                parameters: {pointerType:'touch'},
+                actions: [
+                    { type:'pointerMove',duration:'0',X:startX,Y:startY},
+                    {type:'PointerDown'},
+                    {type:'pause',duration:200},
+                    {type:'pointerMove',duration:'0',X:startX,y:endY},
+                    {type:'pointerUp'}
+                ]
+            }
+        ]);
+
+
+              const newContent = await $('~newContent'); // Replace with actual selector
+        await expect(newContent).toBeDisplayed();
+
+    });
+
+  4.
+  How would you handle the mobile device’s native keyboard in WebDriverIO?
+
+
+
+
+  8. How to launch a deep link inside a mobile app?
+it('should open a deep link', async () => {
+    await driver.execute('mobile: deepLink', {
+        url: 'app://settings/profile',
+        package: 'com.example.app'
+    });
+});
+
+6. How to swipe horizontally between carousel items?
+it('should swipe left in carousel', async () => {
+    const { width, height } = await driver.getWindowRect();
+    await driver.performActions([
+        {
+            type: 'pointer',
+            id: 'finger1',
+            parameters: { pointerType: 'touch' },
+            actions: [
+                { type: 'pointerMove', duration: 0, x: width * 0.8, y: height/2 },
+                { type: 'pointerDown' },
+                { type: 'pause', duration: 100 },
+                { type: 'pointerMove', duration: 1000, x: width * 0.2, y: height/2 },
+                { type: 'pointerUp' }
+            ]
+        }
+    ]);
+});
+7.How to take a screenshot after test failure? (Hooks)
+afterEach(async function() {
+    if (this.currentTest.state === 'failed') {
+        await driver.saveScreenshot(`./errorShots/${this.currentTest.title}.png`);
+    }
+});
+8. Push Notifications come from the backend server and appear outside the app in the device's notification tray. We can test these mainly on Android using Appium’s openNotifications() method and validate the notification text.
+
+   In-App Notifications like toasts, banners, or snackbars are part of the app’s UI and can be tested directly by locating the UI elements using WebDriverIO selectors.
+
+
+9. Background app	driver.background(seconds)
+   Kill app	driver.terminateApp(packageId)
+   Relaunch app	driver.activateApp(packageId)
+10. "Synchronous code runs step by step, blocking the next step until the current one finishes.
+     Asynchronous code allows certain tasks to run in the background and not block the main thread.
+
+

@@ -16,6 +16,6 @@ public class CharacterReplacer {
 
         }
 
-        System.out.println("Character Replace --  " + result.toString());
+            System.out.println("Character Replace --  " + result.toString());
     }
 }

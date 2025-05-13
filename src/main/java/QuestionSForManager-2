@@ -63,13 +63,27 @@ Q1: Handling a situation where a high-performing team member doesn’t agree wit
 Q7.Test Strategy vs Test Approach
 
         Test Strategy is a high-level, organizational-level document that defines the overall testing objectives,
-        standards, and methods to ensure product quality across the organization or a project. It is typically prepared by senior management (like the QA Manager or Test Manager) and remains relatively stable throughout the product lifecycle.
+        standards, and methods to ensure product quality across the organization or a project.
+         It is typically prepared by senior management (like the QA Manager or Test Manager) and
+         remains relatively stable throughout the product lifecycle.
 
         It answers what types of testing will be done (functional, performance, security, etc.).
 
         It defines quality standards, test levels, entry/exit criteria, test environment needs, and risk management.
 
         It ensures that all projects within the organization align with common testing principles.
+
+        For designing a Test Strategy, I first analyze the overall product architecture, business priorities, and release timelines.
+        I prefer a layered approach — starting with unit testing handled by developers, followed by API testing for backend validation, and UI end-to-end testing for user journey validation.
+
+        Based on the risk and business impact, I decide how much automation versus manual testing we need.
+        For automation, I usually cover critical user flows like login, checkout, or dashboards.
+
+        I also define non-functional testing requirements like performance, security, and usability testing early.
+
+        Environments like staging and UAT are planned with mock vs real data setups.
+
+        Finally, I ensure we have clear reporting metrics — like test coverage, defect density, and escape rate — and build a feedback loop with dev, QA, and product teams."
 
         ✅ Key focus: "What to test and why."
 
@@ -84,6 +98,21 @@ Q7.Test Strategy vs Test Approach
         It is dynamic and can adapt as project conditions change.
 
         ✅ Key focus: "How to test and when."
+        "When it comes to Testing Approach, I follow a very structured methodology.
+
+        Let's say I'm testing a Login Page:
+
+        First, I write positive test cases — correct email and password combinations.
+
+        Then, I create negative test cases — invalid email formats, wrong passwords, empty fields, special character injections, etc.
+
+        I also apply Boundary Value Analysis — for example, checking email/password field limits (max/min character inputs).
+
+        Next, I check API responses for login — status codes like 200, 400, 401 — using Postman or automated API scripts.
+
+        For security, I do basic penetration tests like SQL Injection, credential stuffing attempts.
+
+        If feasible, I automate the stable login scenarios with Selenium or Cypress to make regression fast and reliable.
 
 
 

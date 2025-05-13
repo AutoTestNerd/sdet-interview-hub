@@ -157,6 +157,9 @@ Q 3. What is the static keyword in Java?
 6) What are commonly used interfaces in Selenium
  8 How is memeory allocated in String literal and New String class object
  9 How string is immutable?
+ 10. Difference between a process and a thread
+ Discussed horizontal and vertical scaling
+ Difference between abstract and interface class in OOP
 
 
  ✅ Why Use a private Constructor?

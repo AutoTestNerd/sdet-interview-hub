@@ -29,8 +29,8 @@ public class BinarySearch_1 {
         return -1;
     }
     public static void main(String[] args) {
-        int[] arr ={-1,-2,0,4,6,7,9};
-        int key =9;
+        int[] arr ={-2,-1,0,4,6,7,9};
+        int key =-1;
        int pos = binarySearh(arr,key);
        if(pos != -1){
            System.out.println(key +" element  found at  " + pos);

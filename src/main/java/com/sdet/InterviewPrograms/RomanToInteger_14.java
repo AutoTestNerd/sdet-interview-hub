@@ -2,7 +2,7 @@ package com.sdet.InterviewPrograms;
 
 public class RomanToInteger_14 {
 
-    //MCDLXVI
+    //MDCLXVI
     public static  int romanToInteger(String str){
         int num=0;
         int i=0;

@@ -37,8 +37,8 @@ public class RotateArrayByK_16 {
         }
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7};
-        int k=6;
+            int[] arr = {1,2,3,4,5,6,7};
+            int k=6;
         int n =arr.length;
         rotateArray(arr,k);
         printArray(arr);

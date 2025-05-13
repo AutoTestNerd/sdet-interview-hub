@@ -10,7 +10,8 @@ Ans: To acheive the scalable/robust test automation framework , Here are some be
 
       2. Architectural  layers:
 
-          Test Layers Organisation  :Testing in distributed systems requires a layered approach to address different scopes and risks while
+        Test Layers Organisation  :Testing in distributed systems requires a layered approach to address different scopes
+                                  and risks while
                                      ensuring speed, reliability, and coverage.
                                      Separate the framework into distinct layers such as test scripts, business logic, and utility functions.
 

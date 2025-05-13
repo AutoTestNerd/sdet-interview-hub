@@ -1,0 +1,12 @@
+1. What tools and approaches do you use for performance or load testing of applications?
+2. What are microservices, and what considerations are important when testing a microservices-based application?
+3. Explain continuous integration (CI) and why it is important in automated testing workflows.
+4. How would you design a scalable automation test framework for a large web application?
+5. How do you identify the root cause of a defect uncovered during testing? (Describe your debugging approach.)
+6. How do you locate and interact with dynamic web elements (elements with changing identifiers) in Selenium?
+7. How would you automate REST API testing in your framework? (For example, testing HTTP endpoints with expected status codes and payloads.)
+8. What strategies would you use to handle flaky or nondeterministic tests in your automation suite?
+9. What are the core concepts of object-oriented programming (OOP)?
+10. Write a function to reverse a singly-linked list (for example, 1→2→3→null becomes null←3←2←1).
+11. Given an array of size N–1 containing numbers 1..N with one missing, find the missing number.
+12. Given the head of a singly-linked list, write a function to detect whether it contains a cycle (e.g., using Floyd’s cycle detection).
