@@ -10,3 +10,45 @@
 10. Write a function to reverse a singly-linked list (for example, 1→2→3→null becomes null←3←2←1).
 11. Given an array of size N–1 containing numbers 1..N with one missing, find the missing number.
 12. Given the head of a singly-linked list, write a function to detect whether it contains a cycle (e.g., using Floyd’s cycle detection).
+
+import java.io.*;
+import java.util.HashMap;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+// Main class should be named 'Solution' and should not be public.
+class Solution {
+    public static void main(String[] args) {
+
+        private static final int Maxreq=5;
+        private static long TImeout = 60*1000;
+        Map<String ,Deque<long>>  UserRequestTimes = new HashMap<>();
+
+        System.out.println("Hello, World");
+    }
+    public boolean allowRequest(String UserId){
+        long currentTime = System.currentTimeMillis();
+        UserRequestTimes.putIfAbsent(UserId,new ArrayDequeu());
+        Deque<long> timestamps = UserRequestTimes.get(userId);
+
+        while(!timestamps.isEmpty() && currentTime-timestamps.peekFirst()>=TImeout){
+            timestamps.pollFirst();
+        }
+        if(timestamps.size() <Maxreq){
+            timestamps.addLast(currentTime);
+            return true;
+        }
+        return false;
+    }
+}
+
+
+/*Implement a Rate Limiter class that:
+1. Limits requests per user: Each user (identified by userId) can make at most N requests per minute.
+2. Provides a method boolean allowRequest(String userId) that returns:
+    * true if the request is allowed.
+    * false if the user has exceeded the limit within the last 60 seconds.
+Assumptions:
+* N = 5 requests per user per minute.
+*/

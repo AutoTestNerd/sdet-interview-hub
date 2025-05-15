@@ -1,6 +1,7 @@
 Q- What is a constructor? Can we override a constructor?
 
-contructor is method in class which has same name as class which be class when object is created.
+A constructor in Java is a special method used to initialize objects.
+It has the same name as the class and does not have a return type, not even void.
 Key Features of a Constructor:
 ✅ The constructor name must match the class name.
 ✅ It does not have a return type (not even void).
@@ -110,7 +111,48 @@ Q 3. What is the static keyword in Java?
         Method Overloading is used when you want to perform the same action (like addition, multiplication) on different types or numbers of inputs. It improves the flexibility of your code.
 
  6. What is exception?
+    Exception is an event that disturpts the execution flow of the programs.
 
+    3 types of Exception:
+        a. Checked Exception - This occurs during compile time which can be handle through try catch and finally.
+            list of checked Exception :
+               IOException
+               filenotFoundException
+               SQLException
+               ClassNotFoundException
+               NoSuchMethodException
+               malFormedUrlException
+        b) Unchecked Exception- its a runtime exception due to program bug/issue.
+              ArrayoutofBoundException.
+              NullPointerException
+              AirthmeticException
+              IndexOutofboundException
+              IllegealArgumnetException
+
+        3. Error - This occurs due to memory or some other issue whihc is unrelated to programs.
+                outofMemoryErro
+                StackoverFlowError
+
+         Hierarchy of Exceptions:
+         1. Java.lang.object
+                      Throwable Class
+                              Exception
+                              Error
+    Cretae Custom Exception:
+      public class noSuchElementFound extends RuntimeException {
+                          public noSuchElementFound(String Message){
+                           super(message);
+                           }
+                           }
+        psvm(){
+        try{
+          webelement submit =driver.findByELement(By.id("login"))
+          submit.click();
+        }
+        catch(noSuchElement Exception e){
+          throw new noSuchElementFound("No Such ELement found");
+         }
+        }
  7. serilization vs deseriilzation in java?
         Serialization is the process of converting a Java object into a byte stream so that it can be:
 
@@ -145,10 +187,113 @@ Q 3. What is the static keyword in Java?
     Meaning | Once created, it cannot be changed | You can modify the content directly
     Example | str.concat("Java") returns a new object | sb.append("Java") modifies the same object
 
+9. Why String is imutable?
+             A class is immutable if once an object is created, its state (data) cannot be changed.
 
+             In Java:
+
+             java
+             Copy
+             Edit
+             String str = "Hello";
+             str.concat(" World");
+             System.out.println(str); // Output: Hello — original object is unchanged
+             The concat() method creates a new String object, leaving str unchanged.
+
+             ✅ Why Is String Immutable in Java? (In-Depth)
+             Here are key reasons:
+
+             1. Security
+             Strings are widely used in:
+
+             File paths
+
+             Network connections (URLs)
+
+             Class loading (Class.forName("com.xyz.Driver"))
+
+             Credentials (username/password)
+
+             If String were mutable:
+
+             java
+             Copy
+             Edit
+             String url = "jdbc:mysql://localhost";
+             connect(url);
+             // imagine another thread changed url to "malicious://"
+             → That could compromise security.
+
+             2. Caching & String Pool (Memory Optimization)
+             Java uses a String pool to save memory.
+
+             java
+             Copy
+             Edit
+             String a = "Test";
+             String b = "Test";
+             System.out.println(a == b); // true (same object)
+             If String were mutable:
+
+             java
+             Copy
+             Edit
+             a.append("Hack"); // if allowed, it would corrupt `b` too
+             So immutability ensures that strings in the pool stay constant and safe to reuse.
+
+             3. Thread Safety
+             Since String is immutable, it's inherently thread-safe.
+
+             No synchronization is required for reading or sharing strings between threads.
+
+             java
+             Copy
+             Edit
+             String shared = "data"; // safe to use across threads
+             This eliminates bugs due to concurrent modification.
+
+             4. HashCode Caching and Usage in Collections
+             String overrides hashCode() and is widely used as a key in hash-based collections like:
+
+             HashMap, HashSet, Hashtable
+
+             Since the value doesn’t change, the hashCode stays constant — which ensures consistent behavior.
+
+             java
+             Copy
+             Edit
+             Map<String, String> map = new HashMap<>();
+             map.put("key", "value");
+             If key changed later → you’d never find the value again.
+
+             5. Easy to Debug and Predictable
+             Since strings don’t change once created, you can trust the value remains what you expect.
+
+             Makes code simpler to debug and reason about.
+
+             ✅ How is String Made Immutable?
+             Internally:
+
+             The String class uses a final char[] value array.
+
+             This array is marked private and not exposed.
+
+             There are no setters or methods that modify the array in place.
 13. Explain the collections framework hierarchy.
 14. Difference between Hashtable and HashSet.
+
+    Hastable stores key -value pairs and it is synchronized ans it doesn't allow null key and value.
+    HashSet store only unique element , not synchronized by defaullt and allow one null values.
+    HashSet internally call HashMap and while Hashtable uses a hash table data structure.
+
+
 15. Difference between Comparable and Comparator.
+     comparable is use to for natural ordering of the object, need to implement comparable interface and override the compataeTo method.
+     only one way to compare objects.
+
+     Comparator is used to custome ordering of the object implment copaartor iNTERFACE TO OVERID ETHE METHODA compare().
+
+
 17. Write a program to create a custom exception.
 20. Difference between final, finally, and finalize.
 19. Why is an abstract class allowed to have a constructor?

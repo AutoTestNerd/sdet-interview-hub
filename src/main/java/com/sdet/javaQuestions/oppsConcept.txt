@@ -1,12 +1,11 @@
 Q : What are the oops Concept in Java?
 Answer :
     Encapsulation : hiding the data or method that operates on data with in the class and allowing access through
-                   public method(getter ans setter).
+                    public method(getter ans setter).
                     it protects the internal state of the object from outside reference;
 
               Key Point of encapsulation :
-                   Private data members: private access modiifer.
-
+                   Private data members: private access modifier.
                    public method (getter & Setter) : The data can be accessed or modified only through getter (to access) and setter (to modify) methods,
                                                       which are provided as public methods.
 
@@ -53,17 +52,11 @@ Answer :
        }
 
     2. Abstraction:
+
+
        Hiding the implement details from the user and shows only essential feature.
-       Abstraction can be acheived using abstract class and Interface.
-
+       Abstraction can be achieved using abstract class and Interface.
        Using Abstract  class : Class can't be initiated and  may contain abstract methods (methods without a body) that must be implemented by subclasses.
-
-
-
-
-
-
-
 
                 How Abstraction Works Here:
                  Abstract Class Shape:
@@ -71,48 +64,37 @@ Answer :
                  Declares an abstract method area() (no implementation).
 
                  Provides a concrete method displayArea() that uses area().
-
                  Subclasses (Circle, Rectangle):
-
                  Must implement the abstract method area() with their specific logic.
-
                   Inherit the displayArea() method, which works for all shapes without knowing their type.
-
                   User Interaction:
-
                   Users call displayArea() without worrying about how area() is calculated internally.
 
        Using Interface :
        it's a blueprint for a class and contains only abstract method and also support multiple inheritance.
-      Refer TestAbstarctionUsingInterface code
+       Refer TestAbstarctionUsingInterface code
 
            How Abstraction Works with Interfaces:
            Interface Shape:
-
            Declares the abstract method area().
-
            Provides a default method displayArea() (avoids forcing all subclasses to reimplement it).
-
            Implementing Classes (Circle, Rectangle):
-
            Must implement area() (the interface’s contract).
-
            Inherit the displayArea() method from the interface.
-
            User Interaction:
-
            Call displayArea() without knowing how area() is calculated.
 
-3. Polymorphism : one interface has many implementation.
+
+3.  Polymorphism : one interface has many implementation.
          two type of Polymorphism :
          1. Compile time Polymorphism - Method Overloading :
                Method overloading allows multiple methods in class which has same name but different parameters.
          2. Run Time Polymorphism - Method overriding:
               Method overriding : allows the specific implementation of method in subclass that is already present in Parent class.
-4. Inheritance :
+4.  Inheritance :
          in Inheritance , A child class inherits the all properties or behaviors  from Parents class
 
-         Type of iNheritance
+         Type of inheritance
          1. Single inheritance - One child class inherits from one parent class.
          2. Multiple Inheritance: A class implements multiple interfaces.
          3. Multilevel Inheritance : A class inherits form another child class;

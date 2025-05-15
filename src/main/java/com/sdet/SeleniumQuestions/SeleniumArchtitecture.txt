@@ -1,6 +1,7 @@
 Q:1 . Explain Selenium architecture?
 
-      Selenium architecture follow cleint server model where client sends the commands to server(Browser) to perform specific actions.
+      Selenium architecture follow cleint server model where client
+      sends the commands to server(Browser) to perform specific actions.
       The communication between server and client is standardise via W3C protocol or Json wire protocol.
 
 
