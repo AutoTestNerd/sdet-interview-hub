@@ -9,8 +9,12 @@ Q:1 . Explain Selenium architecture?
 
       components /How Selenium works:
 
-      1. Client Libaraies: Selenium provides client libraries in different language like java,ruby,python etc,  The Script is written in different supporting langauge and selenium client libraries interpert these command and send to the webdriver server.
+      1. Client Libaraies: Selenium provides client libraries in different language like java,ruby,python etc,
+          The Script is written in different supporting langauge and selenium client libraries interpert these
+          command and send to the webdriver server.
       2. WebDeriver Api :this Api converts these command into HTTP format that browser can understand.
       3. W3C Protocol : This protocol send the HTTP request to Browser driver through rest api.
-      4. Browser Driver - Browser driver accept this commands  and translates them into native action for the specific browser(e.g., ChromeDriver for Chrome, GeckoDriver for Firefox).
-      5. Browser : Browser execute the commands like opening URL,click and other actions and send the response back  to the client.
+      4. Browser Driver - Browser driver accept this commands  and translates them into native action
+         for the specific browser(e.g., ChromeDriver for Chrome, GeckoDriver for Firefox).
+      5. Browser : Browser execute the commands like opening URL,click and other actions and send the
+         response back  to the client.

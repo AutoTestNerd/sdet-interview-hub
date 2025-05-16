@@ -42,4 +42,21 @@ Fluent Wait - Custom wait with polling frequency and exceptional Handling.
 
            It makes your code more flexible — you can easily switch to FirefoxDriver, EdgeDriver, etc. later.
 
-  Q4. Selenium He
+  Q4. how it works internally?
+       WebDriver is an interface provided by Selenium.
+
+       ChromeDriver is a class that implements WebDriver.
+       So you're assigning an object of ChromeDriver to a reference of type WebDriver — this is polymorphism.
+
+        new ChromeDriver()-
+          This creates a new instance of Chrome browser controlled by Selenium.
+
+          Internally, the constructor of ChromeDriver does several things:
+
+          Starts the ChromeDriver server executable (usually chromedriver.exe)
+
+          Establishes a session with the Chrome browser
+
+          Sends a newSession command to Chrome via W3C WebDriver protocol
+
+          Launches the actual Chrome browser window in automation mode

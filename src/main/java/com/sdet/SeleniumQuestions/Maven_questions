@@ -1,0 +1,17 @@
+1. plugin vs dependency
+ans- Dependecy is external libraries or jar which your project needs to compile, run, or test your code.
+     Declared inside the <dependencies> section in your pom.xml.
+     They are downloaded from remote repositories (like Maven Central) and added to your project’s classpath.
+
+     exa- selenium, restassure
+
+    Plugin - Plugin is a tool that perform specific task during build life cyle(compileing mrunning test , pakcaging)
+    Build Plugins:
+       1. maven CompilePlugin - Compiles your Java source code.
+       2. maven surefire plufgin - Run Unit Test
+       3. maven Jar Plugin - Packages compiled code into a JAR file.
+       4. maven clean plugin - Cleans the target directory
+       5. Maven Install Plugin
+       6. Maven deploy plugin
+
+
