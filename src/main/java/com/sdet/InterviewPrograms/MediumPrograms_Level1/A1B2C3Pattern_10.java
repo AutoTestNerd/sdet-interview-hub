@@ -14,6 +14,7 @@ public class A1B2C3Pattern_10 {
 
 
 
+
         }
 
 //        map.forEach((key,value)-> System.out.print(key+""+value));

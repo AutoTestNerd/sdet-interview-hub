@@ -293,6 +293,28 @@ Q 3. What is the static keyword in Java?
 
      Comparator is used to custome ordering of the object implment copaartor iNTERFACE TO OVERID ETHE METHODA compare().
 
+Q.16 - How is a String saved in JAVA?
+Q.17 Difference between == and .equals() ?
+ == checks if two references point to the same memory location.
+ .equals() checks if two objects are logically equal based on their data. For strings
+ and most custom objects, always prefer .equals() unless you're intentionally checking for object identity."
+  String a = "hello";
+  String b = "hello";
+  String c = new String("hello");
+
+  System.out.println(a == b);       // true (same reference from String pool)
+  System.out.println(a == c);       // false (c is new object in heap)
+  System.out.println(a.equals(c));  // true (same content)
+
+
+ Q17- difference between string pool and heap memory?
+
+
+  The String Pool is a special area in the heap memory where Java stores interned string literals to save memory. If the same literal is used again, Java reuses the existing object.
+
+  In contrast, when you use new String("..."), it always creates a new object in the heap, even if the content is the same.
+
+  The pool helps improve memory efficiency and performance by avoiding duplicate immutable strings."
 
 17. Write a program to create a custom exception.
 20. Difference between final, finally, and finalize.

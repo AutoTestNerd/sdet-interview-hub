@@ -14,4 +14,17 @@ ans- Dependecy is external libraries or jar which your project needs to compile,
        5. Maven Install Plugin
        6. Maven deploy plugin
 
+            Maven Default Lifecycle: Key Phases (in order)
+            Here’s a breakdown of the most commonly used phases in the default lifecycle:
 
+            Phase	Purpose
+            validate	Validates the project structure and configuration.
+            compile	Compiles the source code of the project.
+            test	Runs unit tests using a suitable framework (e.g., JUnit, TestNG).
+            package	Packages the compiled code into a JAR, WAR, etc.
+            verify	Runs checks to verify the package is valid and meets quality criteria.
+            install	Installs the package into the local repository (~/.m2/repository).
+            deploy	Copies the final package to a remote repository (for sharing).
+
+       Profile :A Maven profile is a way to customize or modify the build configuration based
+        on the environment or use case—like different database connections, test environments, or OS-specific builds.

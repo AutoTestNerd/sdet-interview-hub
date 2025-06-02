@@ -1,5 +1,6 @@
 Q1: how you set objectives for team members?
-Answer : Setting clear and impactful objective for my team has always been priority.i believe in allinging team goal with
+Answer : Setting clear and impactful objective for my team has always been priority.
+  i believe in allinging team goal with
         both indvidual and compnay's objective to ensure mutual growth.
 
          The objectives I typically set were centered around key areas like:
@@ -61,6 +62,50 @@ Answer : Setting clear and impactful objective for my team has always been prior
 
 
        5  How I resolve conflicts between QA and other teams:
-          ans :I resolve conflicts by understanding the real problem, focusing teams on common goals, not individual opinions, improving collaboration,
-           and building  a culture of shared responsibility for quality."
-           I use data (like defect leakage metrics, rework rates) to drive objective discussions
+
+          ans : “I handle conflicts with a calm, structured, neutral approach and data making descicon— focusing on understanding
+          the root cause and helping both parties align on a common goal.
+           I believe that most conflicts arise due to miscommunication, unclear responsibilities, or lack of empathy.
+            I treat it as an opportunity to improve team collaboration.
+
+                Let me give you a real example:
+
+                In a previous project, there was an ongoing conflict between a senior QA engineer and a backend
+                 developer. The QA was frustrated because the API contracts kept changing without proper
+                  communication, which caused automation failures.
+                   On the other hand, the developer felt the QA team was blocking deployments over
+                   what he considered “minor issues.”
+
+                I took the following steps:
+                 1.  Private 1:1 Discussions
+                    I met each person individually to hear their side of the story without judgment.
+                    I realized both were right from their perspectives —
+                    the developer was under pressure to meet deadlines, while QA was trying to uphold quality.
+
+                2. Joint Resolution Meeting
+                I facilitated a meeting with both of them, setting ground rules for respectful discussion.
+                 I helped them focus on facts: where the process failed (lack of API versioning and missing
+                  documentation) — not on blaming each other.
+
+                🧩 3. Actionable Improvements
+                We agreed on better API change tracking via Swagger updates.
+
+                Introduced a weekly Dev-QA sync to review upcoming changes.
+
+                QA started writing contract tests with stubbed responses to avoid test failures
+                 due to unstable backend data.
+
+      Q; How do you delegate tasks within your team?
+      I delegate tasks based on a combination of team members’ skill sets, experience levels, growth goals,
+      and project priorities.
+       Effective delegation is not just about getting work done — it’s also about building ownership,
+       accountability, and developing individual strengths.
+
+
+      Q: . How do you handle high-pressure deadlines or multiple priorities?
+      In high-pressure situations, I start by prioritizing tasks based on risk and impact.
+      I work with stakeholders to re-scope if needed and involve the team in realistic planning.
+       I communicate transparently if trade-offs are necessary. I also ensure the team doesn’t burn out b
+       y distributing work evenly
+       and encouraging short breaks. Pressure is inevitable,
+       but how we manage it as a team makes all the difference.”

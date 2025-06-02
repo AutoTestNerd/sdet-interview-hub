@@ -11,7 +11,7 @@ class Counter{
         return count;
     }
 }
-public class synchronized_Example {
+public class    synchronized_Example {
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();
 

@@ -17,6 +17,27 @@ Fluent Wait - Custom wait with polling frequency and exceptional Handling.
                                 fluentwait.until(driver - > driver.findelement(By.id("login"));
 
 
+     without concise code
+     Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                 .withTimeout(Duration.ofSeconds(30))     // Maximum wait time
+                 .pollingEvery(Duration.ofSeconds(2))     // Check every 2 seconds
+                 .ignoring(NoSuchElementException.class); // Ignore if not found initially
+
+             // Define the wait condition using an anonymous inner class (not lambda)
+             Function<WebDriver, WebElement> waitFunction = new Function<WebDriver, WebElement>() {
+                 @Override
+                 public WebElement apply(WebDriver driver) {
+                     return driver.findElement(By.id("login"));
+                 }
+             };
+
+             // Perform the wait using the full function
+             WebElement loginElement = wait.until(waitFunction);
+
+
+
+
+
   Q2. What is the difference between driver.close() and driver.quit()?
 
 
