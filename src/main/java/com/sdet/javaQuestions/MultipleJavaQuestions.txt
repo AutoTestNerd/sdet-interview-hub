@@ -215,10 +215,6 @@ Q 3. What is the static keyword in Java?
              Credentials (username/password)
 
              If String were mutable:
-
-             java
-             Copy
-             Edit
              String url = "jdbc:mysql://localhost";
              connect(url);
              // imagine another thread changed url to "malicious://"
@@ -226,18 +222,11 @@ Q 3. What is the static keyword in Java?
 
              2. Caching & String Pool (Memory Optimization)
              Java uses a String pool to save memory.
-
-             java
-             Copy
-             Edit
              String a = "Test";
              String b = "Test";
              System.out.println(a == b); // true (same object)
              If String were mutable:
 
-             java
-             Copy
-             Edit
              a.append("Hack"); // if allowed, it would corrupt `b` too
              So immutability ensures that strings in the pool stay constant and safe to reuse.
 
@@ -246,9 +235,6 @@ Q 3. What is the static keyword in Java?
 
              No synchronization is required for reading or sharing strings between threads.
 
-             java
-             Copy
-             Edit
              String shared = "data"; // safe to use across threads
              This eliminates bugs due to concurrent modification.
 
@@ -259,9 +245,7 @@ Q 3. What is the static keyword in Java?
 
              Since the value doesn’t change, the hashCode stays constant — which ensures consistent behavior.
 
-             java
-             Copy
-             Edit
+
              Map<String, String> map = new HashMap<>();
              map.put("key", "value");
              If key changed later → you’d never find the value again.

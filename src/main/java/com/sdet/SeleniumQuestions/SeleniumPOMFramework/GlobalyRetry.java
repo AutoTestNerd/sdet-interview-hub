@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 
 public class GlobalyRetry implements IAnnotationTransformer {
     @Override
-    public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
+    public void transform(ITestAnnotation iTestAnnotation, Class Class, Constructor constructor, Method method) {
        IRetryAnalyzer retry=  iTestAnnotation.getRetryAnalyzer();
        if(retry==null){
            iTestAnnotation.setRetryAnalyzer(RetryTest.class);

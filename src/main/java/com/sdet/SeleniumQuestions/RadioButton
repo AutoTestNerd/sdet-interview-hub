@@ -1,0 +1,12 @@
+public void selectRadioButtonByValue(String groupName, String value) {
+    List<WebElement> radios = driver.findElements(By.name(groupName));
+    for (WebElement radio : radios) {
+        if (radio.getAttribute("value").equalsIgnoreCase(value)) {
+            radio.click();
+            break;
+        }
+    }
+}
+
+// Usage:
+selectRadioButtonByValue("gender", "female");

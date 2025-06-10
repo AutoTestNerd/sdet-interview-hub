@@ -10,6 +10,7 @@ public class BulbSwitcher_II {
             for (int i = 0; i <numBulb ; i++) {
                 if((i+1)%press==0){
                     bulbs[i]=!bulbs[i];
+                    System.out.println(" "+ i + "--->>" +bulbs[i]);
                 }
 
             }

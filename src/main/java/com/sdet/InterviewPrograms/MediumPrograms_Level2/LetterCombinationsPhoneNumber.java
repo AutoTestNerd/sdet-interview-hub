@@ -1,5 +1,5 @@
 package com.sdet.InterviewPrograms.MediumPrograms_Level2;
-
+//YouTube - https://www.youtube.com/watch?v=nBe_Ych7XUY&t=668s
 import java.util.ArrayList;
 import java.util.List;
 //Youtube - https://www.youtube.com/watch?v=nBe_Ych7XUY&t=697s
@@ -26,11 +26,14 @@ public class LetterCombinationsPhoneNumber {
         List<String> recResults = getCombinationLetter(digit,idx+1);
         char ch = digit.charAt(idx);
         String chCode=  codes[ch-'0'];
+        System.out.println("CHcode-- " +chCode);
         for (String recString:recResults){
 
             for (int i = 0; i <chCode.length() ; i++) {
                    char code = chCode.charAt(i);
                    myResults.add(code+recString);
+                System.out.println("Manish-- " +myResults);
+
 
             }
         }

@@ -115,3 +115,92 @@ afterEach(async function() {
      Asynchronous code allows certain tasks to run in the background and not block the main thread.
 
 
+ What is a Promise?
+Definition:
+A Promise is a JavaScript object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+States of a Promise:
+
+Pending: Initial state; neither fulfilled nor rejected.
+
+Fulfilled: Operation completed successfully.
+
+Rejected: Operation failed.
+
+Why Promises?
+Before promises, asynchronous code used callbacks, which led to “callback hell” — hard to read and maintain. Promises provide a cleaner, more manageable way to handle async code.
+
+
+
+The async keyword is used to declare a function that always returns a Promise. Even if you return a non-promise value, it is implicitly wrapped in a resolved Promise.
+
+
+
+What is await?
+Definition:
+The await keyword can only be used inside async functions. It pauses execution of the function until the awaited Promise is resolved or rejected.
+
+Common Crash Types in Firebase Crashlytics
+1. Null Pointer Exception
+Android: java.lang.NullPointerException
+
+Cause: Trying to use an object reference that is null.
+
+2. Index Out of Bounds Exception
+Android: java.lang.IndexOutOfBoundsException
+
+Cause: Accessing an invalid index in arrays or lists.
+
+3. Illegal Argument Exception
+Android: java.lang.IllegalArgumentException
+
+Cause: Passing invalid arguments to a method.
+
+4. Out of Memory Error
+Android/iOS: Memory exhaustion causing app to crash.
+
+5. Fatal Exception
+A catch-all term for crashes that cause app termination.
+
+6. ANR (Application Not Responding)
+Android app freezes or UI thread is blocked for too long.
+
+7. SIGABRT (Signal Abort)
+iOS/Native: App aborts due to assertion failure or critical error.
+
+8. SIGSEGV (Segmentation Fault)
+iOS/Native: Accessing invalid memory (common in C/C++ or Swift/Obj-C code).
+
+9. EXC_BAD_ACCESS
+iOS: Accessing memory that has been deallocated or is invalid.
+
+10. Illegal State Exception
+Android: App is in an unexpected state.
+
+11. Network-related Exceptions
+Timeouts, unknown host, SSL exceptions causing app failure.
+
+12. Stack Overflow Error
+Infinite recursion or excessive method calls.
+
+13. Class Not Found Exception
+Missing classes or dependencies at runtime.
+
+14. Number Format Exception
+Errors when parsing invalid number strings.
+
+15. Security Exceptions
+Unauthorized access or permission issues.
+
+
+
+adb logcat | grep Crashlytics
+For iOS, use idevicesyslog
+
+Biometric
+await driver.execute('mobile: sendBiometricMatch', { match: true });
+    } else {
+      // For Android, simulate fingerprint success
+      await driver.fingerPrint(1);
+
+

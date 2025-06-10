@@ -1,7 +1,35 @@
 package com.sdet.InterviewPrograms.MediumPrograms_Level2;
 
+import java.util.Arrays;
+
 public class Merge2SortedArray_31 {
 
+
+    public static void Merge_WithoutExtraSpace(int[] arr1 ,int[] arr2){
+        int i=0;
+        int j=0;
+        int k = arr1.length-1;
+        while (i<=k){
+
+             if(arr1[i]>arr2[j]){
+                 int temp= arr2[j];
+                 arr2[j]=arr1[k];
+                 arr1[k]=temp;
+                 k--;
+                 j++;
+             }
+             else {
+                 i++;
+                 continue;
+             }
+
+        }
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+
+
+    }
     public static void merge(int[] arr1 ,int[] arr2){
         int n = arr1.length;
         int m= arr2.length;
@@ -52,7 +80,8 @@ public class Merge2SortedArray_31 {
 
         int[] arr1 ={1,3,5,7};
         int[] arr2 = {0,2,6,8,9};
-        merge(arr1,arr2);
+//        merge(arr1,arr2);
+        Merge_WithoutExtraSpace(arr1,arr2);
         printMerged(arr1, arr2);
     }
 }

@@ -1,5 +1,5 @@
 package com.sdet.InterviewPrograms.MediumPrograms_Level2;
-
+//youtube- https://www.youtube.com/watch?v=6GQEudo87tM
 public class Product_Array_Except_Self {
 
     public static int[] ProductArray(int[] a){
